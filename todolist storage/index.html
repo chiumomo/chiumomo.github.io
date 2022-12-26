@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TO DO LIST</title>
+	<link rel="stylesheet"  href="./vendor/normalize_css/normalize.css">
+	<link rel="stylesheet"  href="./vendor/bootstrap_4-grid/bootstrap-grid.css">
+	<link rel="stylesheet" href="./vendor/fontawesome-free-6.2.0-web/css/all.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="wrapper d-block">
+		<header>To Do List</header>
+		<div class="inputField">
+			<input type="text" class="input" placeholder="what is next to do">
+			<button class="add">
+				<i class="fa-solid fa-plus"></i>
+			</button>
+		</div>
+		<ul class="list">	
+		</ul>
+
+		<div class="footer">
+			<span>
+				You have
+				<div class="pendingTasks"></div>
+				pending tasks
+			</span>
+			<button onclick=delAll() class="btnDelAll">clear all</button>
+		</div>
+		<div class="edit disNone">
+			<i class="index"></i>
+			<input type="text" placeholder="Edit your todo">
+			<button class="add" >ok</button>
+		</div>
+	</div>
+</body>
+<script>
+	const inputBox = document.querySelector('.inputField input');
+	const addBtn = document.querySelector('.inputField button');
+	const toDoList = document.querySelector('.list');
+	const deleteBtn = document.querySelector('.list btnDel');
+	const deleteAllBtn = document.querySelector('.footer btnDelAll');
+	const editBox = document.querySelector('.edit');
+	var listArray = []
+
+	showTasks();
+
+
+	function showTasks() {
+		let task = inputBox.value;
+		let getLocalStorageData = localStorage.getItem('newTodo');
+		if (getLocalStorageData == null)listArray = []
+		else listArray = JSON.parse(getLocalStorageData);
+
+		const pendingTasksNumber = document.querySelector('.pendingTasks');
+		pendingTasksNumber.textContent = listArray.length;
+
+		
+		let newTodoList = '';
+		listArray.forEach((element,index)=>{
+			newTodoList += `
+				<li>
+					<input type="checkbox" id="check${index}">
+						<label class="listContent  for="check${index}">${element}</label>
+					</input>
+					<span onclick="openEdit(${index})" class="icon btnEdit">
+						<i class="fa-solid fa-pencil"></i>
+					</span>
+					<span onclick="delTask(${index})" class="icon btnDel">
+						<i class="fa-solid fa-trash"></i>
+					</span>
+				</li>
+			`;
+		});
+		toDoList.innerHTML = newTodoList;
+		inputBox.value='';
+	}
+
+	addBtn.onclick = ()=>{
+		let getLocalStorageData = localStorage.getItem('newTodo');
+		let newTask = inputBox.value;
+		if (getLocalStorageData !== ''){
+			if (getLocalStorageData == null)
+				listArray = []		
+			else
+				listArray = JSON.parse(getLocalStorageData);
+				listArray.push(newTask);
+				localStorage.setItem('newTodo',JSON.stringify(listArray));
+				showTasks();
+			
+		}
+	}
+
+	function delTask(index){
+		let getLocalStorageData = localStorage.getItem('newTodo');
+		listArray = JSON.parse(getLocalStorageData);
+		listArray.splice(index, 1);
+		localStorage.setItem('newTodo',JSON.stringify(listArray));
+		showTasks();
+	}
+
+	function delAll(){
+		let listArray = []
+		localStorage.setItem('newTodo',JSON.stringify(listArray));
+		showTasks();
+	}
+
+
+	function openEdit(index){
+		let getLocalStorageData = localStorage.getItem('newTodo');
+		editValue = listArray[index]
+		editBox.querySelector('input').value = listArray[index];
+		editBox.querySelector('.index').innerText = index ;
+		editBox.classList.remove('disNone')
+	}
+
+	editBox.querySelector('.add').onclick = () =>{
+		let editValue = editBox.querySelector('input').value;
+		let index = editBox.querySelector('.index').innerText;
+		let getLocalStorageData = localStorage.getItem('newTodo');
+		listArray = JSON.parse(getLocalStorageData);
+		listArray.splice(index,1,editValue);
+		localStorage.setItem('newTodo',JSON.stringify(listArray));
+		showTasks();
+		editBox.classList.add('disNone');
+	}
+	
+
+
+</script>
+
+</html>

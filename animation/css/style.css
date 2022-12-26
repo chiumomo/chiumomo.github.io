@@ -1,0 +1,364 @@
+/*------------------*\
+	Global
+\*------------------*/
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "aril";
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  text-decoration: none;
+}
+
+/*------------------*\
+	Layout
+\*------------------*/
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: #2a89c0;
+}
+.container {
+  padding-top: 100px;
+}
+.container .box {
+  width: 100%;
+  justify-content: space-around;
+}
+.container .box .ani-box {
+  width: 120px;
+  height: 120px;
+  /* border: 2px solid rgb(253, 250, 250); */
+  margin: 0 auto;
+  box-shadow: 4px 4px 5px rgba(52, 115, 152, 0.7);
+}
+
+.box{
+  margin-bottom: 100px;
+}
+
+/*------------------*\
+Component
+\*------------------*/
+
+.intro{
+  font-size: 56px;
+  font-weight: 400;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  text-shadow:4px 20px 15px rgb(243, 247, 249);
+  animation: ani-bounce1 1s 0s linear infinite;
+}
+
+.container .box .ani-box .dot-box {
+  width: 100%;
+  top: 50%;
+  display: flex;
+  padding-left: 5px;
+  padding-right: 5px;
+  justify-content: space-around;
+  transform: translate(0, -50%);
+}
+.container .box .ani-box .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.ani-gradient{
+  overflow: hidden;
+
+}
+
+.ani-gradient:after {
+  content: "";
+  /* border: 1px solid rgb(239, 236, 236); */
+  display: block;
+  height: 100%;
+  width: 100px;
+  position: absolute;
+  background: linear-gradient(to right, rgba(42, 137, 192,0.1) 0%, rgba(42, 137, 192,.5) 10%, rgba(42, 137, 192,7) 20%, rgba(42, 137, 192,8) 40%, rgba(42, 137, 192,.7) 60%, rgba(42, 137, 192,.5) 80%,  rgba(42, 137, 192,0.1) 90%);
+  top: 0;
+  -webkit-animation: gradientColor 1s  linear infinite;
+          animation: gradientColor 1s  linear infinite;
+}
+
+
+@keyframes gradientColor {
+  0% {
+    left: -50px;
+  }
+  100% {
+    left: 80px;
+  }
+}
+
+
+.dot1{
+  animation: ani-bounce1 1s 0s linear infinite;
+}
+.dot2{
+  animation: ani-bounce2 1s 0.1s linear infinite;
+}
+.dot3{
+  animation: ani-bounce3 1s 0.2s linear infinite;
+}
+
+@keyframes ani-bounce1 {
+  0%{ top: 0px;}
+  25%{top: -14px;}
+  50%{ top: 0px;}
+  75%{ top: 14px;}
+  100%{top: 0px;}
+}
+@keyframes ani-bounce2 {
+  0%{ top: 0px;}
+  25%{top: -10px;}
+  50%{ top: 0px;}
+  75%{ top: 10px;}
+  100%{top: 0px;}
+}
+@keyframes ani-bounce3 {
+  0%{ top: 0px;}
+  25%{top: -6px;}
+  50%{ top: 0px;}
+  75%{ top: 6px;}
+  100%{top: 0px;}
+}
+
+.half-circle{
+  animation: ani-rotate 1s linear infinite;
+}
+.ani-rotate{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 48%, rgba(42,137,192,1) 49%, rgba(42,137,192,1) 100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ani-rotate::after{
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(42,137,192,1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes ani-rotate {
+  0%{transform: translate(-50%, -50%) rotate(0deg);}
+  100%{transform:translate(-50%, -50%) rotate(360deg);}
+}
+
+.half-circle__1.ani-rotate{
+  width: 95px;
+  height: 95px;
+  animation: ani-rotate 1.5s 0.3s linear infinite;
+}
+.half-circle__1.ani-rotate::after{
+  width: 75px;
+  height: 75px;
+}
+.half-circle__2.ani-rotate{
+  width: 65px;
+  height: 65px;
+  animation: ani-rotate 1.5s  linear infinite;
+}
+.half-circle__2.ani-rotate::after{
+  width: 45px;
+  height: 45px;
+}
+
+.half-circle__3.ani-rotate{
+  width: 35px;
+  height: 35px;
+  animation: ani-rotate 1.5s 0.6s reverse linear infinite;
+}
+.half-circle__3.ani-rotate::after{
+  width: 15px;
+  height: 15px;
+}
+
+
+.block{
+  width: 80px;
+  height: 80px;
+  border-radius:4px ;
+  border: 8px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  animation: ani-rotate_180 2s  linear infinite;
+}
+
+@keyframes ani-rotate_180 {
+  0%{transform: translate(-50%, -50%) rotate(0deg);}
+  50%{transform:translate(-50%, -50%) rotate(180deg);}
+  100%{transform:translate(-50%, -50%) rotate(180deg);}
+}
+
+.block::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+  background-color: #fff;
+  animation: ani-block 2s 1s linear infinite;
+}
+
+@keyframes ani-block {
+  0%{
+    top: 0%;
+  }  
+  50%{
+    top: 100%;
+  }
+  100%{
+    top: 100%;
+  }
+}
+
+.ani-box .rectangle-box{
+  display: flex;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-around;
+  overflow: hidden;
+  transform: translateY(15px) rotate(180deg);
+}
+
+.ani-grow{
+  bottom: -10px;
+  display: block;
+  width: 5px;
+  height: 20%;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.rectangle__1{
+  animation: ani-grow 1.2s 0.1s linear infinite;
+}
+.rectangle__2{
+  animation: ani-grow 1.2s 0.2s linear infinite;
+}
+.rectangle__3{
+  animation: ani-grow 1.2s 0.35s linear infinite;
+}
+.rectangle__4{
+  animation: ani-grow 1.2s 0.4s linear infinite;
+}
+.rectangle__5{
+  animation: ani-grow 1.2s 0.15s linear infinite;
+}
+
+@keyframes ani-grow {
+  0%{
+    height: 20%;
+  }
+  50%{
+    height: 100%;
+  }
+  100%{
+    height: 20%;
+  }
+}
+
+
+.clock{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock__oclock,.clock__mclock{
+  width: 90%;
+  height: 90%;
+  /* border: 1px solid red; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock__mclock:after{
+  content: "";
+  position: relative;
+  display: block;
+  width: 5%;
+  height: 40%;
+  left: 50%;
+  top: 50%;
+  background-color: rgb(76, 246, 161);
+  transform: translate(-50%,0);
+
+}
+
+.clock__oclock:after{
+  content: "";
+  position: relative;
+  display: block;
+  width: 6%;
+  height: 25%;
+  left: 50%;
+  top: 50%;
+  background-color: rgb(247, 235, 132);
+  transform: translate(-50%, 0);
+
+}
+
+
+.clock__oclock{
+  animation: ani-rotate 24s linear infinite;
+}
+.clock__mclock{
+  animation: ani-rotate 2s linear infinite;
+}
+
+.planet{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: 3px solid  rgba(255, 255, 255, 0.5);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: ani-rotate 2s linear infinite;
+}
+.planet:after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 3px solid rgba(42,137,192,1);
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}

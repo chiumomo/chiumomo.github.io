@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>form_rwd</title>
+	<link rel="stylesheet"  href="vendor/normalize_css/normalize.css">
+	<link rel="stylesheet"  href="vendor/bootstrap_4-grid/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+	<!-- start  main -->
+		<section class="main">
+			<!-- start form-->
+			<div class="card apply">
+				<div class="container">
+					<div class="form">
+						<h2 class="apply__title">帳戶申請表單</h2>
+						<div class="row">
+							<div class="col-lg-6">
+								<h3 class="apply__subtitle">帳戶資訊</h3>
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="form__item">
+											<label for="lastname">姓氏</label>
+											<input id="lastname" type="text" placeholder="王">
+										</div>	
+									</div>
+									<div class="col-lg-6">
+										<div class="form__item">
+											<label for="firstname">名字</label>
+											<input id="firstname" type="text" placeholder="小明">
+										</div>	
+									</div>
+								</div>
+								<div class="form__item">
+									<label for="email">Email</label>
+									<input id="email" type="email" placeholder="oooo123xxx@mail.com">
+								</div>
+								<div class="form__item">
+									<label for="phone">電話</label>
+									<input id="phone" type="phone" placeholder="0900-111-222">
+								</div>	
+										
+							</div>
+							<div class="col-lg-6">
+								<h3 class="apply__subtitle">密碼設定</h3>
+								<div class="form__item">
+									<label for="password＿1">輸入密碼</label>
+									<input id="password_1" type="password" placeholder="英數組合">
+								</div>
+								<div class="form__item">
+									<label for="password_2">再次輸入密碼</label>
+									<input id="password_2" type="password" placeholder="英數組合">
+								</div>	
+							</div>
+						</div>
+						<h3 class="apply__subtitle">地址資訊</h3>
+						<div class="row">
+							<div class="col-lg-2">
+								<div class="form__item">
+									<label for="location">地區</label>
+									<select name="site" id="location">
+										<option value="0">請選擇</option>
+										<option value="1">北北基宜</option>
+										<option value="2">桃竹苗</option>
+										<option value="3">中彰投</option>
+										<option value="4">雲嘉南</option>
+										<option value="5">高屏</option>
+										<option value="6">花東離島</option>
+										</select>
+								</div>	
+							</div>
+							<div class="col-lg-10">
+								<div class="form__item">
+									<label for="adress">詳細地址</label>
+									<input id="adress" type="text" placeholder="oo市............">
+								</div>
+									
+							</div>	
+						</div>
+						
+						<div class="form__item form__item--center apply__term">
+							<div class="checkbox__item">
+								<label for="term">
+									<span>已確認<a href="#!">相關文件</a>並同意</span>
+								</label>
+								<input id="term" type="checkbox">
+								<div class="check"></div>
+							</div>	
+						</div>
+
+						<div class="form__btn-group">
+							<input type="submit" class="btn btn--primary" value="確認送出">
+							<input type="reset"  class="btn btn--secondary" value="清除重填">				
+						</div>
+					</div>
+				</div>
+
+			</div>
+				
+			<!-- end form-->
+		</section>
+	<!-- end  main -->
+
+</div>
+
+	
+
+
+
+
+
+
+<!-- start -->
+<!-- end -->
+</body>
+</html>

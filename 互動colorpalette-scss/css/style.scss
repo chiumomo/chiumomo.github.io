@@ -1,0 +1,47 @@
+*{
+	position: relative;
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	text-decoration: none;
+}
+
+.wrapper{
+	margin-top: 100px;
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	border-radius: 10px;
+	overflow: hidden;
+	
+	.color{
+		width: 400px;
+		height: 48px;
+		font-size: 24px;
+		line-height: 48px;
+		display: flex;
+		justify-content: center;
+		transition: all 0.7s;
+
+		&:hover{
+			height: 300px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+	}
+}
+
+$colorBackgroundColor:(1:#ff6544, 2:#ffc344 , 3:#deff44 , 4:#44eeff , 5:#44ffc3 ) ;
+
+@each $name,$a in $colorBackgroundColor {
+    .color#{$name}{
+    background-color:$a;
+	border: 0px solid $a;
+		&:hover{
+			border: 3px solid;
+			border-color:darken($a,30%);
+		}
+	}
+}
