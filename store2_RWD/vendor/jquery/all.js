@@ -1,5 +1,7 @@
 var rellax = new Rellax('.rellax');
 
+ScrollReveal().reveal('.headline');
+
 var bodyClass = $('.topNav-lg');
 var bodyClass2 = $('.topNav-md-da');  
 var lastScrollY = 0;
@@ -20,7 +22,7 @@ window.addEventListener('scroll', function(){
     }
     else if( st < lastScrollY) {
       bodyClass2.removeClass('hide');
-      $('.group_r').addClass('group_r_rwd')
+      // $('.group_r').addClass('group_r_rwd')
     }else{
       bodyClass2.addClass('hide');
     }
@@ -86,9 +88,5 @@ $(document).ready(function () {
     $('.brand-md','.cart').addClass('topNav-md-da');
   })
 
-  $('[class*=productFrame]').addClass('headline');
-
-  ScrollReveal().reveal('.headline');
 
 });
-

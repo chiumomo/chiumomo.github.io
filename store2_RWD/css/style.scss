@@ -1140,6 +1140,7 @@ header{
 				}
 			}
 			.text-md{
+				writing-mode: horizontal-tb;
 				&:not(:last-child){
 					margin-bottom: 3rem;
 				}
@@ -1203,6 +1204,7 @@ header{
 		.textBox{
 			display: flex;
 			margin-bottom: 10vh;
+			// writing-mode: vertical-rl;
 			.sentenceWrap{
 				margin-left: 10vw;
 				.textWrapIntro{
@@ -1351,6 +1353,7 @@ header{
 	display: flex;
 	flex-direction: row-reverse;
 	overflow: visible;
+	// height: 210vh;
 	.navTitle{
 		position: sticky; 
 		top: 23%;
@@ -1372,10 +1375,9 @@ header{
 		}
 		
 		.itemLink{
-			margin-bottom: 8rem;
-
 			[class*="col-"]{
 				padding: 1rem;
+				margin-bottom: 8rem;
 			}                                                              
 
 			.itemPrice{
@@ -1589,7 +1591,7 @@ header{
 		top: 4rem;
 		padding: 0;
 		.imageContainer {
-			@include productFrame(3,4,url('../images/fish.left.jpg'));
+			@include productFrame(3,4,url('/images/fish.left.jpg'));
 			width: 100%;
 			padding-top: 2px;
 			padding-bottom: 2px;
@@ -1625,7 +1627,7 @@ header{
 		padding: 0;
 		top: 4rem;
 		.imageContainer {
-			@include productFrame(3,4,url('../images/gohan.jpg'));
+			@include productFrame(3,4,url('/images/gohan.jpg'));
 			width: 100%;
 			padding-top: 2px;
 			padding-bottom: 2px;
@@ -1706,7 +1708,7 @@ header{
 			.imageContainer {
 				width: 90%;
 				.productFrame_9_16{
-					@include productFrame(9,16,url('./images/fish.left.jpg'));
+					@include productFrame(9,16,url('/images/fish.left.jpg'));
 				}		
 			}
 			.itemIntroText{

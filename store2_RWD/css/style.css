@@ -1203,6 +1203,10 @@ header .brand {
 .storeIntro .textBox .sentenceWrap .text-lg span:not(:last-child) {
   margin-left: 0.8rem;
 }
+.storeIntro .textBox .sentenceWrap .text-md {
+  -ms-writing-mode: lr-tb;
+      writing-mode: horizontal-tb;
+}
 .storeIntro .textBox .sentenceWrap .text-md:not(:last-child) {
   margin-bottom: 3rem;
 }
@@ -1422,11 +1426,9 @@ header .brand {
   background-size: contain;
   background-image: url("../images/line_gray.cf90a39.svg");
 }
-.product .itemIntro .itemLink {
-  margin-bottom: 8rem;
-}
 .product .itemIntro .itemLink [class*=col-] {
   padding: 1rem;
+  margin-bottom: 8rem;
 }
 .product .itemIntro .itemLink .itemPrice .title {
   letter-spacing: 0.3rem;
@@ -1662,7 +1664,7 @@ header .brand {
   overflow: hidden;
 }
 .reason .reason__left .imageContainer .productFrame_3_4 {
-  background-image: url("../images/fish.left.jpg");
+  background-image: url("/images/fish.left.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1706,7 +1708,7 @@ header .brand {
   overflow: hidden;
 }
 .reason .reason__right .imageContainer .productFrame_3_4 {
-  background-image: url("../images/gohan.jpg");
+  background-image: url("/images/gohan.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1781,7 +1783,7 @@ header .brand {
     width: 90%;
   }
   .reason .reason__side .imageContainer .productFrame_9_16 .productFrame_9_16 {
-    background-image: url("./images/fish.left.jpg");
+    background-image: url("/images/fish.left.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
