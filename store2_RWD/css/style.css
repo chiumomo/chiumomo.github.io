@@ -1192,6 +1192,10 @@ header .brand {
   flex-wrap: wrap;
   overflow: hidden;
 }
+.storeIntro .textBox .sentenceWrap .text-lg {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+}
 .storeIntro .textBox .sentenceWrap .text-lg:not(:last-child) {
   margin-left: 2rem;
 }
@@ -1202,21 +1206,6 @@ header .brand {
 }
 .storeIntro .textBox .sentenceWrap .text-lg span:not(:last-child) {
   margin-left: 0.8rem;
-}
-.storeIntro .textBox .sentenceWrap .text-md {
-  -ms-writing-mode: lr-tb;
-      writing-mode: horizontal-tb;
-}
-.storeIntro .textBox .sentenceWrap .text-md:not(:last-child) {
-  margin-bottom: 3rem;
-}
-.storeIntro .textBox .sentenceWrap .text-md span {
-  font-weight: 400;
-  font-size: 2rem;
-  display: block;
-}
-.storeIntro .textBox .sentenceWrap .text-md span:not(:last-child) {
-  margin-bottom: 1rem;
 }
 .storeIntro .titleBox {
   position: absolute;
@@ -1265,6 +1254,21 @@ header .brand {
   }
   .storeIntro .textBox .sentenceWrap {
     margin-left: 10vw;
+  }
+  .storeIntro .textBox .sentenceWrap .text-md {
+    -ms-writing-mode: lr-tb;
+        writing-mode: horizontal-tb;
+  }
+  .storeIntro .textBox .sentenceWrap .text-md:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .storeIntro .textBox .sentenceWrap .text-md span {
+    font-weight: 400;
+    font-size: 2rem;
+    display: block;
+  }
+  .storeIntro .textBox .sentenceWrap .text-md span:not(:last-child) {
+    margin-bottom: 1rem;
   }
   .storeIntro .textBox .sentenceWrap .textWrapIntro {
     width: 100%;

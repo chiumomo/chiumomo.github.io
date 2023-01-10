@@ -1127,6 +1127,7 @@ header{
 			flex-wrap: wrap;
 			overflow: hidden;
 			.text-lg{
+				writing-mode: vertical-rl;
 				&:not(:last-child){
 					margin-left: 2rem;
 				}
@@ -1139,20 +1140,20 @@ header{
 					margin-left: .8rem;
 				}
 			}
-			.text-md{
-				writing-mode: horizontal-tb;
-				&:not(:last-child){
-					margin-bottom: 3rem;
-				}
-				span{
-					font-weight: 400;
-					font-size: 2rem;
-					display: block;
-				}
-				span:not(:last-child){
-					margin-bottom: 1rem;
-				}
-			}
+			// .text-md{
+			// 	writing-mode: horizontal-tb;
+			// 	&:not(:last-child){
+			// 		margin-bottom: 3rem;
+			// 	}
+			// 	span{
+			// 		font-weight: 400;
+			// 		font-size: 2rem;
+			// 		display: block;
+			// 	}
+			// 	span:not(:last-child){
+			// 		margin-bottom: 1rem;
+			// 	}
+			// }
 
 		}
 	}
@@ -1207,6 +1208,20 @@ header{
 			// writing-mode: vertical-rl;
 			.sentenceWrap{
 				margin-left: 10vw;
+				.text-md{
+					writing-mode: horizontal-tb;
+					&:not(:last-child){
+						margin-bottom: 3rem;
+					}
+					span{
+						font-weight: 400;
+						font-size: 2rem;
+						display: block;
+					}
+					span:not(:last-child){
+						margin-bottom: 1rem;
+					}
+				}
 				.textWrapIntro{
 					width: 100%;
 					display: block;
