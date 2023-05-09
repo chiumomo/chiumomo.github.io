@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import StyledContainer from "../common/Container";
 import headerHeight from "../common/HeaderHeight";
 //是否fixed與這裡的設定無關
 
@@ -12,7 +13,14 @@ const StyledHeader = styled.header`
 
 
 const Header =()=>{
-    return <StyledHeader>this is header</StyledHeader>
+    return(
+        <StyledHeader>
+            <StyledContainer>
+            this is header
+            </StyledContainer>
+        </StyledHeader>
+
+    ) 
 };
 
 export default Header;
