@@ -1,5 +1,5 @@
 import React from "react";
 
-const headerHeight = '200px';
+const headerHeight = '140px';
 
 export default headerHeight;

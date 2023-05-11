@@ -5,6 +5,7 @@ import StyledContainer from "../common/Container";
 const StyledFooter = styled.footer`
     background-color:#777ccb;
     padding:40px 0 ;
+    height: 400px;
 `
 
 const Footer =()=>{

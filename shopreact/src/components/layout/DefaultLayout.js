@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import StyledContainer from "../common/Container";
 
 const StyledPageHeader = styled.div`
-    ${(props)=> props.fixed &&
+    ${(props) => props.fixed &&
         css`
             position:fixed
     `}
@@ -22,7 +22,7 @@ const DefaultLayout = ({fixedHeader,children})=>{
             <StyledContainer>{children}</StyledContainer>
             <Footer/>
         </div>
-    )
+    );
 }
 
 export default DefaultLayout;
