@@ -3,8 +3,8 @@ import styled from "styled-components";
 import headerHeight from "./HeaderHeight";
 
 const StyledClearFix = styled.div`
-    height: ${headerHeight};
-    /* height:${(props)=>props.height||'200px'}; */
+    height: ${headerHeight};   
+    /* height:${(props)=>props.height||'180px'}; */
 
 `
 

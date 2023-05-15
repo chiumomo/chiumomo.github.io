@@ -15,13 +15,13 @@ import { Link } from "react-router-dom";
 
 const StyledHeader = styled.header`
     background-color:${colorPrimary} ;
-    height: ${headerHeight};
     padding: 8px 0;
     width: 100vw;
 `;
 
 const StyledHeaderSection = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     a{
@@ -48,6 +48,12 @@ const StyledToolBar = styled.div`
 const StyledFlex = styled.div`
     display: flex;
 `
+const StyledInput = styled.div`
+    width: 300px;
+    @media (min-width: 769) {
+      width :30vw ;
+    }
+`
 
 const Header =()=>{
     return(
@@ -71,7 +77,9 @@ const Header =()=>{
                         <img src={Logo} height={100} ></img>
                     </Link>
                     <StyledFlex>
-                        <Input.Search placeholder="搜尋產品" allowClear  style={{ width: 300 }} />
+                        <StyledInput>
+                            <Input.Search placeholder="搜尋產品" allowClear  style={{width:'300'}}  />
+                        </StyledInput>
                         <Link to="/cart">
                             <ShoppingCartOutlined style={{fontSize:'32px',marginLeft:'10px',color:'#fff'}} />
                         </Link>

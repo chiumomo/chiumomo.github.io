@@ -15,9 +15,9 @@ const StyledPageHeader = styled.div`
 
 const DefaultLayout = ({fixedHeader,children})=>{
     return(
-        <div>
+        <div >
             <StyledPageHeader fixed={fixedHeader}>
-                <Header/>
+            <Header/>
             </StyledPageHeader>
             <StyledContainer>{children}</StyledContainer>
             <Footer/>
