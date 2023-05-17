@@ -51,7 +51,7 @@ const StyledFlex = styled.div`
 const StyledInput = styled.div`
     width: 300px;
     @media (min-width: 769) {
-      width :30vw ;
+        width :30vw ;
     }
 `
 
@@ -61,7 +61,7 @@ const Header =()=>{
             <StyledContainer>
                 <StyledHeaderSection>
                     <StyledNavigator>
-                        <a href="#!">蝦蝦購物</a>
+                        <a href="/">蝦皮購物</a>
                         <a href="#!">下載app</a>
                         <a href="#!">追蹤我們</a>
                         <a href="#!">Blog</a>

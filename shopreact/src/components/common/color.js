@@ -1,6 +1,6 @@
 import React from "react";
 
 
-const colorPrimary = '#ff4002' ;
+const colorPrimary = 'rgba(255,55,10)' ;
 
 export default colorPrimary;
